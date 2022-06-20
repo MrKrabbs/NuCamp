@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning how to place object locations</title>
+    <style>
+        .divright{
+           position: relative; 
+           left: 1000px;
+        }
+    </style>
+    <style>
+        .divleft{
+            position: fixed; 
+            left: 0px;
+            display: inline-block;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+
+    <!--    <div class="grid-child purple">
+            Grid Column 1
+        </div>
+    
+        <div class="grid-child green">
+            Grid Column 2
+        </div>
+      
+    </div>
+-->
+        <div class="grid-child purple">
+            <label for="country">Country:</label>
+            <select id="country" name="country" >
+                <option>Choose a country</option>
+                <option value="brazil">Brazil</option>
+                <option value="brazil">France</option>
+                <option value="brazil">Japan</option>
+                <option value="brazil">Libya</option>
+                <option value="brazil">U.S.A.</option>
+            </select>
+        </div>
+        <div class="grid-child green">
+            <label for="country2">Country:</label>
+            <select id="country2" name="country2" >
+                <option>Choose a country</option>
+                <option value="brazil">Brazil</option>
+                <option value="brazil">France</option>
+                <option value="brazil">Japan</option>
+                <option value="brazil">Libya</option>
+                <option value="brazil">U.S.A.</option>
+            </select>
+        </div>
+    </div>
+</body>
+</html>

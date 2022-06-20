@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Guessing Game</title>
+</head>
+<body>
+    <h1>Color Guessing Game</h1>
+    <button type="button" onclick="runGame()">Start Game</button>
+    <script>
+
+        const COLORS_ARRAY =['blue', 'cyan', 'gold', 'gray', 'green', 'magenta', 'orange', 'red', 'white', 'yellow'];
+       
+        function runGame() {
+
+            let guess = '';
+            let correct = false;
+            const targetIndex = Math.floor(Math.random()* COLORS_ARRAY.length);
+            console.log('value of targetindex is ' + targetIndex);
+            const target = COLORS_ARRAY[targetIndex];
+            console.log('value of target is ' + target);
+            let numTries = 0;
+
+
+            do {
+                guess = prompt('I am thinking of one of these colors:\n\n' + COLORS_ARRAY.join(', ') + '\n\nWhat color am I thinking of?\n'); 
+
+                if (guess === null) {
+                    alert('The game has been aborted !');
+                    return;
+                }
+
+                numTries += 1;
+                correct = checkGuess(guess,target);
+             } while(!correct);
+             
+             alert('Congratulations you guessed the color. .\n\n  It took you ' + numTries + ' guesses to finish game.\n\n Hit ok to see color in background.');   
+             document.body.style.background = guess;                
+
+        } 
+
+        function checkGuess(guess,target) {
+            let correct = false;
+
+            if (COLORS_ARRAY.includes(guess) === false) {
+                alert("Sorry, I don't recognize your color.\n\n Please try again.");
+            } else if (COLORS_ARRAY.indexOf(guess) > COLORS_ARRAY.indexOf(target)) {
+                alert('Sorry your guess is incorrect.\n\n Hint: Your guess is alphabetically higher than mine');
+            }
+              else if (COLORS_ARRAY.indexOf(guess) < COLORS_ARRAY.indexOf(target)) {
+                alert('Sorry your guess is incorrect.\n\n Hint: Your guess is alphabetically lower than mine');
+            } else {
+                correct = true;
+            }
+               
+            return correct;
+
+        }
+
+    </script>
+</body>
+</html>

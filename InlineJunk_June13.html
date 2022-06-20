@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning how to place object locations</title>
+    <style>
+      /*  #texttwo {*/
+        input[type="text"] {
+            display: inline;
+            width: 160px;
+            height: 20px;
+            padding: 5px;
+            border: 1px solid blue; 
+            margin: 5px; 
+           /* background-color: rgb(221, 232, 244);*/
+        }
+
+        select {
+            width: 160px;
+            height: 40px;
+            padding: 5px;
+            border: 1px solid blue; 
+            margin: 5px; 
+            background-color: rgb(221, 232, 244);   
+        }
+
+        .center {
+            text-align: center;
+            border: 3px solid rgb(150, 150, 188);
+        }
+
+        body {
+            background-color: rgb(171, 187, 196);
+            
+        }
+    </style>
+</head>
+<body>
+        <h1 class="center">Select your jobs</h1>
+        <div id="divright" name="divright">
+            <label for="textone">Job Name</label>
+            <input type="text" id="textone" name="textone" >
+            <label for="texttwo">Second Job</label>
+            <input type="text" id="texttwo" name="texttwo" >
+            <label for="textthree">Third Job</label>
+            <input type="text" id="textthree" name="texttwo" >
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option>Choose a country</option>
+                <option value="brazil">Brazil</option>
+                <option value="brazil">France</option>
+                <option value="brazil">Japan</option>
+                <option value="brazil">Libya</option>
+                <option value="brazil">U.S.A.</option>
+            </select>
+            <label for="runAll">Run all remaining jobs</label>
+            <input type="checkbox" id="runAll" name="runAll" />
+        </div>
+</body>
+</html>
